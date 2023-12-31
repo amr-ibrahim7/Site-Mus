@@ -18,7 +18,10 @@ const fetcher = (url) => fetch(url).then((res) => res.json());
 const AlbumSlider = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
-  const { data, error } = useSWR("http://localhost:4000/albums", fetcher);
+  const { data, error } = useSWR(
+    "https://all-data-yuu4.onrender.com/albums",
+    fetcher
+  );
 
   if (error) return "Failed to fetch data";
   if (!data) return "Loading...";

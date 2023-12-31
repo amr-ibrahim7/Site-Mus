@@ -2,7 +2,7 @@ import React from "react";
 import SectionHeader from "../SectionHeader";
 import PostList from "./PostList";
 const getPosts = async () => {
-  const res = await fetch("http://localhost:4000/posts");
+  const res = await fetch("https://all-data-yuu4.onrender.com/posts");
   return res.json();
 };
 
